@@ -6,15 +6,36 @@
 
 <head>
     <title>{{ title }}</title>
+    
+    <link rel="stylesheet" href="https://bootswatch.com/5/superhero/bootstrap.min.css">
+    
     <link rel="stylesheet" href="{% static 'main.css' %}">
+
 </head>
+
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h4 class="text-white">Collapsed content</h4>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+</div>  
 
 <body>
     <div class="App">
         <header class="App-header">
             <img src="{% static 'Octocat.png' %}" class="App-logo" alt="logo" />
             <p>
-                GitHub Codespaces <span class="heart">♥️</span> Django
+                Welcome to our task  <span class="heart">♥️</span>  management system!
+                
+                <!-- <a href="/tasks">Click here to create a new task</a> -->
+                <a href="{% url 'index' %}">Click here to create a new task</a>
             </p>
             <p class="small">
                 Edit <code>hello_world/templates/index.html</code> and see changes live!

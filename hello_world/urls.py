@@ -22,4 +22,6 @@ urlpatterns = [
     path("", core_views.index),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
+    # path('register/', views.register,name='register'),
+    path('', include('tasks.urls')),
 ]
